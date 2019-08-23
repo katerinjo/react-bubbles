@@ -24,10 +24,13 @@ const ColorList = ({ colors, updateColors }) => {
     const id = colorToEdit.id;
     axiosWithAuth()
       .put(`http://localhost:5000/api/colors/${id}`, colorToEdit)
-      .then(console.log)
+      .then(res => {
+        updateColors(colorToEdit);
+        setEditing(false);
+        setColorToEdit(initialColor);
+      })
       .catch(console.log);
-    setEditing(false);
-    setColorToEdit(initialColor);
+
   };
 
   const deleteColor = color => {
