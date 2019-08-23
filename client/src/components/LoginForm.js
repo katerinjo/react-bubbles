@@ -27,14 +27,14 @@ export default withFormik({
     };
   },
 
-  validationSchema: Yup.object().shape({
-    name: Yup
-      .string()
-      .required('username required'),
-    role: Yup
-      .string()
-      .required('passwords required')
-  }),
+  // validationSchema: Yup.object().shape({
+  //   name: Yup
+  //     .string()
+  //     .required('username required'),
+  //   password: Yup
+  //     .string()
+  //     .required('passwords required')
+  // }),
 
   handleSubmit(vals, { resetForm }) {
     const creds = {

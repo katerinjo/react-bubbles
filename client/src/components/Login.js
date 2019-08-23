@@ -7,7 +7,8 @@ const Login = () => {
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
   const loginRequest = credentials => {
-    axios.post('http://localhost:3333/api/login', credentials)
+    alert('loginRequest')
+    axios.post('http://localhost:5000/api/login', credentials)
       .then(res => {
         console.log(res)
         // localStorage.setItem('token', res.data.payload);
