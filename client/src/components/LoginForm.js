@@ -21,8 +21,8 @@ const Basic = ({ touched, errors }) => {
 export default withFormik({
   mapPropsToValues(props) {
     return {
-      username: '',
-      password: '',
+      username: 'Lambda School',
+      password: 'i<3Lambd4',
       subFun: props.subFun
     };
   },
