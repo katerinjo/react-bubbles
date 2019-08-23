@@ -10,7 +10,7 @@ const Login = () => {
     axios.post('http://localhost:5000/api/login', credentials)
       .then(res => {
         console.log(res)
-        // localStorage.setItem('token', res.data.payload);
+        localStorage.setItem('token', res.data.payload);
       })
       .catch(console.log);
   }
