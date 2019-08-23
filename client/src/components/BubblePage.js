@@ -28,7 +28,8 @@ const BubblePage = () => {
   };
 
   const delColor = id => {
-    const newList = colorList.filter(old => old.id !== id);
+    const tryit = [...colorList];
+    const newList = tryit.filter(old => old.id !== id);
     setColorList(newList);
   };
 
